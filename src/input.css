@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #8a2be2, #6a0dad); /* Gradient from violet to purple */
+    transition: width 0.4s ease-in-out;
+  }
+
+  .nav-link:hover::before {
+    width: 100%;
+  }
