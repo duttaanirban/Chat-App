@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Page</title>
+    <link href="./output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body class="font-[Poppins] min-h-screen bg-cover bg-center flex justify-center items-center" style="background-image: url('images/wp9764093.webp');">
+    <div class="w-full max-w-sm bg-[#4b0ddeb3] bg-opacity-70 text-white rounded-lg p-8 shadow-lg backdrop-blur-sm">
+        <!-- Logo -->
+        <div class="flex justify-center mb-4">
+            <img class="w-18 h-20" src="Linkify.png" alt="Linkify Logo">
+        </div>
+
+        <!-- Form Heading -->
+        <h1 class="text-4xl text-center font-semibold mb-4">LOGIN</h1>
+        <p class="justify-center text-center text-xl mb-6">Welcome Back!!</p>
+
+        <!-- Login Form -->
+        <form id="loginForm" autocomplete="off">
+            <!-- Username Input -->
+            <div class="relative mb-6">
+                <input type="text" id="username"  placeholder="Username" required class="w-full h-12 bg-transparent border border-white border-opacity-20 rounded-full px-4 text-white placeholder-white outline-none focus:ring-2 focus:ring-white">
+                <i class='bx bxs-user absolute right-4 top-3 text-xl'></i>
+            </div>
+
+            <!-- Password Input -->
+            <div class="relative mb-6">
+                <input type="password" id="password" autocomplete="off" placeholder="Password" required class="w-full h-12 bg-transparent border border-white border-opacity-20 rounded-full px-4 text-white placeholder-white outline-none focus:ring-2 focus:ring-white">
+                <i class='bx bxs-lock-alt absolute right-4 top-3 text-xl'></i>
+            </div>
+
+            <!-- Remember Me & Forgot Password -->
+            <div class="flex justify-between text-sm mb-6">
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" class="accent-white">
+                    <span>Remember Me</span>
+                </label>
+                <a href="#" class="hover:underline">Forgot Password?</a>
+            </div>
+
+            <!-- Login Button -->
+            <button type="button" onclick="validateForm()" class="w-full h-12 bg-white text-gray-800 font-semibold rounded-full shadow-md hover:bg-gray-300 transition duration-300 flex items-center justify-between px-4">
+                <span class="flex-grow text-center">Login</span>
+                <i class="fa-solid fa-right-to-bracket ml-2"></i>
+            </button>
+            
+            
+            
+
+            <!-- Register Link -->
+            <div class="text-center text-sm mt-6">
+                <p>Don't have an account? <a href="sign-up.html" class="font-semibold text-white hover:underline">Register</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

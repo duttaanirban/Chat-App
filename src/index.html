@@ -7,29 +7,9 @@
     <link rel="stylesheet" href="./output.css">
     <link rel="stylesheet" href="./input.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
-    <style>
-      .underline-linkify {
-        position: relative;
-        display: inline-block;
-      }
-
-      .underline-linkify::before {
-        content: '';
-        position: absolute;
-        bottom: -3px; /* Adjust as per your requirement */
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: linear-gradient(to right, #8a2be2, #6a0dad); /* Gradient color */
-        transition: width 0.4s ease-in-out;
-      }
-
-      .underline-linkify:hover::before {
-        width: 100%;
-      }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
-<body class="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to -[#fbc2eb] h-screen">
+<body class="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to -[#fbc2eb]">
     <header class="bg-white">
         <nav class="flex justify-between items-center w-[92%] mx-auto">
             <div>
@@ -47,16 +27,16 @@
                         <a class="nav-link text-gray-900 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">Help Center</a>
                     </li>
                     <li class="relative">
-                        <a class="nav-link text-gray-900 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">Blog</a>
+                        <a class="nav-link text-gray-900 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">FAQ's</a>
                     </li>
                 </ul>
             </div>
             <div class="flex items-center gap-6">
               <!-- Sign in button with gradient hover effect -->
-              <button class="bg-purple-500 text-white px-5 py-2 rounded-full hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-600 transition-all duration-300 ease-in-out">
-                Sign in
+              <button id="signInBtn" class="bg-purple-500 text-white px-5 py-2 rounded-full hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-600 transition-all duration-300 ease-in-out">
+                Sign up
               </button>
-              <button class="bg-purple-500 text-white px-5 py-2 rounded-full hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-600 transition-all duration-300 ease-in-out">
+              <button id="logInBtn" class="bg-purple-500 text-white px-5 py-2 rounded-full hover:bg-gradient-to-r hover:from-violet-500 hover:to-purple-600 transition-all duration-300 ease-in-out">
                 Log in
               </button>
             </div>
@@ -78,12 +58,176 @@
             </div>
         </div>
 
-        <!--Features-->
-        <div>
-            <div>
-
-            </div>
+        <!-- Features Section -->
+<div class="py-10">
+    <div class="font-bold text-4xl text-center mb-20">
+      <p>Features</p>
+      <p class="text-xl mt-7 font-semibold">Learn more what you can do on Linkify.</p>
+    </div>
+    <div class="flex justify-evenly gap-8">
+      
+      <!-- Card 1 -->
+      <div class="relative w-64 h-80 border rounded-lg shadow-lg overflow-hidden group">
+        <!-- Image (visible by default) -->
+        <img class="w-full h-full object-cover" src="https://scontent.whatsapp.net/v/t39.8562-34/409923743_807244881161302_7535830063297760273_n.png?ccb=1-7&amp;_nc_sid=73b08c&amp;_nc_ohc=CyI8sgAUAPUQ7kNvgFLTK6h&amp;_nc_ht=scontent.whatsapp.net&amp;_nc_gid=Ak39UTOxb7Nd55or4YPArxV&amp;oh=01_Q5AaIBpgo-C3qK3w-SlS2URITdFMk5LUIzWd4tKPNz-ZxT5I&amp;oe=66F62B4A" alt="Fast. Secure. Simple.">
+        <!-- Text (hidden by default, shown on hover) -->
+        <div class="absolute inset-0 bg-purple-600 text-white flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p class="font-bold text-xl">"Fast. Secure. Simple."</p>
+          <p class="mt-2 text-center px-4">Your messages are always private and encrypted, without the hassle.</p>
         </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="relative w-64 h-80 border rounded-lg shadow-lg overflow-hidden group">
+        <!-- Image (visible by default) -->
+        <img class="w-full h-full object-cover" src="https://scontent.whatsapp.net/v/t39.8562-34/409975714_6604952862960198_3751153167170455025_n.png?ccb=1-7&amp;_nc_sid=73b08c&amp;_nc_ohc=9l_UX_hEPP0Q7kNvgElCaoY&amp;_nc_ht=scontent.whatsapp.net&amp;_nc_gid=Ak39UTOxb7Nd55or4YPArxV&amp;oh=01_Q5AaIOaKg5K_BrvVj2TBvPAbnVr9DgP0GxH8voBYp-sL62g8&amp;oe=66F65161" alt="Connect Effortlessly">
+        <!-- Text (hidden by default, shown on hover) -->
+        <div class="absolute inset-0 bg-purple-600 text-white flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p class="font-bold text-xl">"Connect Effortlessly"</p>
+          <p class="mt-2 text-center px-4">One-click sign-up, and you're ready to chat with anyone.</p>
+        </div>
+      </div>
+    
+  
+      <!-- Card 3 -->
+      <div class="relative w-64 h-80 border rounded-lg shadow-lg overflow-hidden group">
+        <!-- Image (visible by default) -->
+        <img class="w-full h-full object-cover" src="https://scontent.whatsapp.net/v/t39.8562-34/409933362_911111613911167_7807328441450442389_n.png?ccb=1-7&amp;_nc_sid=73b08c&amp;_nc_ohc=lFvxzO7ZjIMQ7kNvgGZUYiT&amp;_nc_ht=scontent.whatsapp.net&amp;_nc_gid=Ak39UTOxb7Nd55or4YPArxV&amp;oh=01_Q5AaIIjl2xAJ5pBIMUVqiApKtcdIiiS8SDJ0PXiBE7cMAcNe&amp;oe=66F62868" alt="Built for You">
+        <!-- Text (hidden by default, shown on hover) -->
+        <div class="absolute inset-0 bg-purple-600 text-white flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p class="font-bold text-xl">"Built for You"</p>
+          <p class="mt-2 text-center px-4">Designed to simplify your day-to-day conversations without any extra clutter.</p>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+<div class="py-20 flex flex-col items-center">
+    <div class="font-bold text-4xl text-center mt-10">
+      <p>FAQs</p>
+    </div>
+  
+    <!-- FAQ Item 1 -->
+    <div class="w-3/4 lg:w-1/2 mt-10">
+      <div class="Question bg-gray-100 p-4 rounded-lg shadow-md cursor-pointer flex justify-between items-center" onclick="toggleAnswer(1)">
+        <h4 class="text-xl font-semibold">How do I sign up?</h4>
+        <i class="fas fa-chevron-down" id="arrow-1"></i>
+      </div>
+      <div class="Answer bg-white p-4 rounded-lg shadow-md mt-2 hidden" id="answer-1">
+        <p>Signing up is easy! Just click on the "Sign Up" button on the homepage, enter your details, and you’ll be ready to start chatting in no time.</p>
+      </div>
+    </div>
+  
+    <!-- FAQ Item 2 -->
+    <div class="w-3/4 lg:w-1/2 mt-8">
+      <div class="Question bg-gray-100 p-4 rounded-lg shadow-md cursor-pointer flex justify-between items-center" onclick="toggleAnswer(2)">
+        <h4 class="text-xl font-semibold">Is my data safe with Linkify?</h4>
+        <i class="fas fa-chevron-down" id="arrow-2"></i>
+      </div>
+      <div class="Answer bg-white p-4 rounded-lg shadow-md mt-2 hidden" id="answer-2">
+        <p>Yes! Linkify uses end-to-end encryption to ensure that your messages are always private and secure.</p>
+      </div>
+    </div>
+  
+    <!-- FAQ Item 3 -->
+    <div class="w-3/4 lg:w-1/2 mt-8">
+      <div class="Question bg-gray-100 p-4 rounded-lg shadow-md cursor-pointer flex justify-between items-center" onclick="toggleAnswer(3)">
+        <h4 class="text-xl font-semibold">What features does Linkify offer?</h4>
+        <i class="fas fa-chevron-down" id="arrow-3"></i>
+      </div>
+      <div class="Answer bg-white p-4 rounded-lg shadow-md mt-2 hidden" id="answer-3">
+        <p>Linkify offers features such as one-click sign-up, private messaging, group chats, and multimedia sharing.</p>
+      </div>
+    </div>
+  
+    <!-- FAQ Item 4 -->
+    <div class="w-3/4 lg:w-1/2 mt-8">
+      <div class="Question bg-gray-100 p-4 rounded-lg shadow-md cursor-pointer flex justify-between items-center" onclick="toggleAnswer(4)">
+        <h4 class="text-xl font-semibold">How do I reset my password?</h4>
+        <i class="fas fa-chevron-down" id="arrow-4"></i>
+      </div>
+      <div class="Answer bg-white p-4 rounded-lg shadow-md mt-2 hidden" id="answer-4">
+        <p>If you’ve forgotten your password, click on the "Forgot Password?" link on the login page, and follow the instructions to reset it.</p>
+      </div>
+    </div>
+  
+    <!-- FAQ Item 5 -->
+    <div class="w-3/4 lg:w-1/2 mt-8">
+      <div class="Question bg-gray-100 p-4 rounded-lg shadow-md cursor-pointer flex justify-between items-center" onclick="toggleAnswer(5)">
+        <h4 class="text-xl font-semibold">Is Linkify free to use?</h4>
+        <i class="fas fa-chevron-down" id="arrow-5"></i>
+      </div>
+      <div class="Answer bg-white p-4 rounded-lg shadow-md mt-2 hidden" id="answer-5">
+        <p>Yes, Linkify is completely free to use with optional premium features available for enhanced functionality.</p>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Contact Section -->
+<div class="contact-section py-20 flex flex-col items-center">
+    <div class="font-bold text-4xl text-center mb-10">
+      <p>Contact Us</p>
+    </div>
+  
+    <!-- Feedback Form -->
+    <div class="w-3/4 lg:w-1/2 mb-10">
+      <h3 class="font-semibold text-xl mb-4">We'd love to hear from you!</h3>
+      <form id="feedbackForm" class="bg-gray-100 p-6 rounded-lg shadow-md">
+        <div class="mb-4">
+          <input type="text" placeholder="Your Name" class="w-full p-2 rounded-lg border border-gray-300" required>
+        </div>
+        <div class="mb-4">
+          <input type="email" placeholder="Your Email" class="w-full p-2 rounded-lg border border-gray-300" required>
+        </div>
+        <div class="mb-4">
+          <textarea placeholder="Your Message" class="w-full p-2 rounded-lg border border-gray-300" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="bg-purple-600 text-white p-2 rounded-lg w-full">Submit Feedback</button>
+      </form>
+    </div>
+</div>
+
+<div class="bg-gray-100">
+  <footer class="bg-gray-300 p-6 rounded-lg shadow-lg">
+    <!-- Contact Options -->
+    <div class="items-center justify-center">
+      <h3 class="font-semibold text-xl mb-4 text-center">Contact Us Directly</h3>
+      <div class="flex space-x-4 justify-center">
+        <a href="mailto:anirbandutta458@gmail.com" class="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full shadow-md cursor-pointer hover:bg-purple-600 transition duration-300">
+          <i class="fas fa-envelope text-2xl"></i>
+        </a>
+        <a href="https://twitter.com/Anirban_ad8" target="_blank" class="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full shadow-md cursor-pointer hover:bg-purple-600 transition duration-300">
+          <i class="fab fa-twitter text-2xl"></i>
+        </a>
+        <a href="https://github.com/duttaanirban" target="_blank" class="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full shadow-md cursor-pointer hover:bg-purple-600 transition duration-300">
+          <i class="fa-brands fa-github text-2xl"></i>
+        </a>
+        <a href="https://linkedin.com/in/anirban-dutta-709861292?" target="_blank" class="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full shadow-md cursor-pointer hover:bg-purple-600 transition duration-300">
+          <i class="fab fa-linkedin text-2xl"></i>
+        </a>
+        <a href="https://instagram.com/anirban__3" target="_blank" class="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full shadow-md cursor-pointer hover:bg-purple-600 transition duration-300">
+          <i class="fab fa-instagram text-2xl"></i>
+        </a>
+      </div>
+      <div class="flex gap-2 items-center justify-evenly mt-10">
+        <p>2024 <i class="fa-regular fa-copyright mr-1"></i>Linkify Ltd.</p>
+        <p>Made with <i class="fa-solid fa-heart mr-1"></i>by Anirban</p>
+      </div>
+    </div>
+   <!-- Go to Top Button -->
+<button onclick="scrollToTop()" class="fixed bottom-4 right-4 bg-purple-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-purple-700">
+  <i class="fas fa-arrow-up"></i>
+</button>
+  </footer>
+</div>
+
+
+  
+  
     </main>
+    <script src="app.js"></script>
 </body>
 </html>

@@ -16,3 +16,48 @@
   .nav-link:hover::before {
     width: 100%;
   }
+
+  .perspective {
+    perspective: 1000px;
+  }
+
+  .underline-linkify {
+    position: relative;
+    display: inline-block;
+  }
+
+  .underline-linkify::before {
+    content: '';
+    position: absolute;
+    bottom: -3px; /* Adjust as per your requirement */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #8a2be2, #6a0dad); /* Gradient color */
+    transition: width 0.4s ease-in-out;
+  }
+
+  .underline-linkify:hover::before {
+    width: 100%;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .contact-section h3 {
+    color: #333;
+  }
+  .contact-section form {
+    transition: background-color 0.2s;
+  }
+  .contact-section form:hover {
+    background-color: #e2e8f0;
+  }
+  .contact-section a {
+    transition: background-color 0.2s;
+    width: 50px; /* Adjust for icon size */
+    height: 50px; /* Adjust for icon size */
+    justify-content: center; /* Center the icon */
+    align-items: center; /* Center the icon */
+  }
