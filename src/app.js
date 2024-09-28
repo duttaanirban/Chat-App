@@ -11,11 +11,11 @@ function toggleAnswer(index) {
   }
 
   document.getElementById('signInBtn').addEventListener('click', function() {
-    window.location.href = 'sign-up.html'; // Redirect to the sign-in page
+    window.location.href = 'Sign-up/sign-up.html'; // Redirect to the sign-in page
   });
 
   document.getElementById('logInBtn').addEventListener('click', function() {
-    window.location.href = 'Log-in.html'; // Redirect to the log-in page
+    window.location.href = 'Login/Log-in.html'; // Redirect to the log-in page
   });
 
   function scrollToTop() {

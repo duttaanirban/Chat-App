@@ -9,7 +9,7 @@ function validateForm() {
     } else {
         alert("Form submitted successfully");
         // Redirect to chat.html after successful login
-        window.location.href = 'chat.html'; // Redirect to the chat page
+        window.location.href = '../Chat/chat.html'; // Redirect to the chat page
     }
 
     // Clear input fields after validation

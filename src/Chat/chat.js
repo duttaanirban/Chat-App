@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const contactList = document.getElementById('contactList');
     const emojiButton = document.getElementById('emojiButton');
     const emojiPicker = document.getElementById('emojiPicker');
-    const messageInputSection = document.getElementById('messageInputSection'); // Reference to the input section
-
+    const messageInputSection = document.getElementById('messageInputSection');
+    
     // Function to display chat window and message input when a contact is clicked
     contactItems.forEach(item => {
         item.addEventListener('click', function() {
@@ -91,18 +91,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Emoji picker functionality
     emojiButton.addEventListener('click', () => {
-        emojiPicker.classList.toggle('hidden');
+        emojiPicker.classList.toggle('hidden'); // Toggle emoji picker visibility
     });
 
     emojiPicker.addEventListener('emoji-click', event => {
-        const emoji = event.detail.unicode;
-        messageInput.value += emoji;
+        const emoji = event.detail.unicode; // Get selected emoji
+        messageInput.value += emoji; // Append emoji to input
     });
 
     // Hide emoji picker when clicking outside
     document.addEventListener('click', (event) => {
         if (!emojiPicker.contains(event.target) && event.target !== emojiButton) {
-            emojiPicker.classList.add('hidden');
+            emojiPicker.classList.add('hidden'); // Hide emoji picker
         }
     });
 });
+
+// In your chat.js file
+document.getElementById('fileUpload').addEventListener('change', function(event) {
+    const files = event.target.files;
+    const fileNames = Array.from(files).map(file => file.name).join(', ');
+    alert(`You selected: ${fileNames}`);
+});
+
