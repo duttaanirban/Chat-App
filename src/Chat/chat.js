@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+// document.addEventListener("DOMContentLoaded", function() {
     const contactItems = document.querySelectorAll('.contact-item');
     const chatWindow = document.getElementById('chatWindow');
     const chatMessages = document.getElementById('chatMessages');
@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const emojiButton = document.getElementById('emojiButton');
     const emojiPicker = document.getElementById('emojiPicker');
     const messageInputSection = document.getElementById('messageInputSection');
+
     
     // Function to display chat window and message input when a contact is clicked
     contactItems.forEach(item => {
@@ -89,9 +90,14 @@ document.addEventListener("DOMContentLoaded", function() {
         contactList.appendChild(saveButton);
     });
 
+    
+
+ 
     // Emoji picker functionality
-    emojiButton.addEventListener('click', () => {
-        emojiPicker.classList.toggle('hidden'); // Toggle emoji picker visibility
+    emojiButton.addEventListener('click', (event) => {
+        event.stopPropagation()
+        emojiPicker.classList.toggle('hidden');
+        console.log("clivked to open") // Toggle emoji picker visibility
     });
 
     emojiPicker.addEventListener('emoji-click', event => {
@@ -101,11 +107,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Hide emoji picker when clicking outside
     document.addEventListener('click', (event) => {
+        // Check if the emoji picker is visible and the click is outside the picker and button
         if (!emojiPicker.contains(event.target) && event.target !== emojiButton) {
-            emojiPicker.classList.add('hidden'); // Hide emoji picker
+            emojiPicker.classList.add('hidden'); // Hide the emoji picker
         }
     });
-});
+
+    
+// });
 
 // In your chat.js file
 document.getElementById('fileUpload').addEventListener('change', function(event) {

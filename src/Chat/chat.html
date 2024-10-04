@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/emoji-picker-element@1"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
 </head>
 <body class="bg-gray-100 font-[Poppins] flex">
 
@@ -33,11 +35,14 @@
         <!-- Message input section hidden initially -->
         <div id="messageInputSection" class="relative flex items-center bg-white border-t rounded-md border border-gray-300 p-2 mt-auto hidden">
             <!-- Emoji Picker -->
-            <emoji-picker id="emojiPicker" class="absolute z-50 bottom-16"></emoji-picker>
+            <emoji-picker id="emojiPicker" class="absolute z-50 bottom-16 hidden"></emoji-picker>
             <!-- Emoji Button -->
-            <button id="emojiButton" class="text-2xl text-gray-500 hover:text-gray-700 mr-2">
-                <i class="fa-regular fa-face-smile"></i>
-            </button>
+
+<button id="emojiButton" class="text-2xl text-gray-500 cursor-wait hover:text-gray-700 mr-2" title="Emoji" aria-label="emoji">
+    <box-icon type='solid' name='balloon'></box-icon>
+</button>
+
+
             <!-- Message Input -->
             <input type="text" id="messageInput" placeholder="Type your message..." class="flex-grow border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-purple-300" />
             <label for="fileUpload" class="ml-2 bg-gray-200 text-gray-600 rounded-lg px-4 py-2 hover:bg-gray-300 cursor-pointer">Upload</label>
@@ -48,7 +53,7 @@
     </div>
     
 
-    
+
     <script src="chat.js"></script>
 </body>
 </html>
