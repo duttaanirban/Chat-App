@@ -29,7 +29,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // If all checks pass, show success message
-        alert('Account created successfully!');
-        form.reset(); // Reset the form
+        fetch('http://localhost:5000/register', {
+            method: 'POST', // HTTP method
+            headers: {
+                'Content-Type': 'application/json', // Content type to specify JSON format
+            },
+            body: JSON.stringify({
+                fullName: fullName,
+                email: email,
+                phoneNumber: phoneNumber,
+                birthDate: birthDate,
+                password: password,
+                address: address,
+                city: city
+            }) // Convert your data to JSON string
+        })
+        .then(response => response.json()) // Parse the JSON response
+        .then(data => {
+            console.log('Success:', data); // Handle success
+            alert('Account created successfully!');
+            form.reset(); // Reset the form
+        })
+        .catch((error) => {
+            console.error('Error:', error); // Handle error
+        });
     });
 });
